@@ -1,9 +1,9 @@
 <template>
   <div class="fd-home_layout">
-    <div class="fd-home_header">
+    <div class="fd-home_header" ref="homeHeader">
       <slot name="header"></slot>
     </div>
-    <div class="fd-home_content">
+    <div class="fd-home_content" ref="homeContent">
       <div class="fd--home_nav">
         <slot name="nav"></slot>
       </div>
@@ -15,12 +15,19 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue, Prop } from 'vue-property-decorator';
 @Component({
   name: 'home_layout',
 })
 export default class LayoutHome extends Vue {
+  @Prop({default: 60}) private headerHeight!: string | number;
 
+  private mounted() {
+    if (Number(this.headerHeight) !== 60) {
+      (this.$refs.homeHeader as HTMLElement).style.height = `${this.headerHeight}px`;
+      (this.$refs.homeContent as HTMLElement).style.height = `calc(100% - ${this.headerHeight}px)`;
+    }
+  }
 }
 </script>
 <style lang="less">
@@ -28,6 +35,16 @@ export default class LayoutHome extends Vue {
   .size(100%);
   .fd-home_header {
     .size(100%, 60px);
+  }
+  .fd-home_content {
+    .size(100%, calc(100% - 60px));
+    .flex_box();
+    .fd--home_nav {
+      min-width: 100px;
+    }
+    .fd--home_content {
+      .flex_1();
+    }
   }
 }
 </style>
