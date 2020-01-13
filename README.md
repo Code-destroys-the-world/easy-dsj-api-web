@@ -1,33 +1,9 @@
-# vue-cli3
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
+# 大数据 前端API网站
+    `框架技术栈`: Vue + Vue-router + Vuex + TS
+    `模块NPM`: easy-dsj
+    `Vue模板`: https://github.com/he8hepeng/myVue-compontent.git
+    `Vue-cli3`脚手架: vue create --preset he8hepeng/cli3
+    开发小组: Code-destroys-the-world
 
 ### Api网站 TS+Vue(全家桶)
 
