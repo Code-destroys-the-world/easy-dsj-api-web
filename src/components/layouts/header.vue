@@ -10,16 +10,20 @@
 </template>
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import { State, namespace } from 'vuex-class';
+import { State, namespace, Action } from 'vuex-class';
+
+const appData = namespace('publics');
+
 @Component({
   name: 'headHome',
 })
 export default class extends Vue {
-  @namespace('app').State('activeIndex') private activeIdx!: string;
-
+  @appData.Action('getActive') public getActive!: any;
+  @appData.State('activeIndex') private activeIdx!: string;
   private activeIndex: string = '1';
+
   private handleSelect(key: string, keyPath: [] ): void {
-    console.log(key, keyPath, 'active', this.activeIdx);
+    this.getActive(key);
   }
 }
 </script>
