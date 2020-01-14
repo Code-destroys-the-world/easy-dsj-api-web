@@ -1,3 +1,11 @@
+<!--
+ * @Author: hepeng
+ * @Date: 2020-01-07 16:41:26
+ * @LastEditTime : 2020-01-13 17:04:17
+ * @LastEditors  : Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \easy-dsj-api-web\src\components\layouts\index.vue
+ -->
 <template>
   <div class="fd-home_layout">
     <div class="fd-home_header" ref="homeHeader">
@@ -41,9 +49,11 @@ export default class LayoutHome extends Vue {
     .flex_box();
     .fd--home_nav {
       min-width: 100px;
+      height: 100%;
     }
     .fd--home_content {
       .flex_1();
+      height: 100%;
     }
   }
 }

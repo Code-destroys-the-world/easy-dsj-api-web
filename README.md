@@ -1,9 +1,21 @@
+<!--
+ * @Author: hepeng
+ * @Date: 2020-01-07 14:58:39
+ * @LastEditTime : 2020-01-13 16:49:13
+ * @LastEditors  : Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \easy-dsj-api-web\README.md
+ -->
 # 大数据 前端API网站
-    `框架技术栈`: Vue + Vue-router + Vuex + TS
-    `模块NPM`: easy-dsj
-    `Vue模板`: https://github.com/he8hepeng/myVue-compontent.git
-    `Vue-cli3`脚手架: vue create --preset he8hepeng/cli3
+    框架技术栈: Vue + Vue-router + Vuex + TS
+    模块NPM: easy-dsj
+    Vue模板: https://github.com/he8hepeng/myVue-compontent.git
+    Vue-cli3脚手架: vue create --preset he8hepeng/cli3
     开发小组: Code-destroys-the-world
+    API开发地址: https://github.com/Code-destroys-the-world/easy-dsj-api-web.git
+    NPM模块开发地址: https://github.com/Code-destroys-the-world/esay-dsj-components.git
+    vue3.0模板: https://github.com/Code-destroys-the-world/vue-template-cli3.git
+    vue2.x模板: https://github.com/Code-destroys-the-world/vue-template-cli2.x.git
 
 ### Api网站 TS+Vue(全家桶)
 
@@ -11,8 +23,15 @@
 期望完成: easy-dsj Vue模板 数据操作 等查询的 学习的功能
 ---
 
+### 提交规范
+---
+Lslint必须开启 无任何警告,报错方可提交
+---
+
+
 #### 常见错误
-    依赖`错误`
+
+    依赖错误
 
 | 错误信息                                                                                                                                                    | 解决方法                         |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
