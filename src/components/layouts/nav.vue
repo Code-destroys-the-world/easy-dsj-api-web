@@ -10,9 +10,7 @@
   <div class="fd-nav">
     <el-menu
       default-active="Water-ball"
-      class="el-menu-vertical-demo"
-      @open="handleOpen"
-      @close="handleClose">
+      class="el-menu-vertical-demo">
       <el-submenu index="visualization">
         <template slot="title">
           <span>展示类</span>
