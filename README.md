@@ -25,15 +25,16 @@
 
 ### 开发须知
 1.已完成自动化router构建
-· scr/views/pages 文件夹下的.vue文件 为模块入口文件
-· src/components/pages 为模块的子路由 命名方式 模块名 + '_' + 组件名.vue
-· 之后router会自动添加路由文件 不许要进行维护
+  · scr/views/pages 文件夹下的.vue文件 为模块入口文件
+  · src/components/pages 为模块的子路由 命名方式 模块名 + '_' + 组件名.vue
+  · 之后router会自动添加路由文件 不许要进行维护
 
 ### 提交规范
 ---
 Lslint必须开启 无任何警告,报错方可提交
+新建个人 feature/your-name 分支进行开发
+模块开发完成后 提交并联系管理员 进行merge
 ---
-
 
 #### 常见错误
 
