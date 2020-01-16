@@ -7,17 +7,12 @@
  * @FilePath: \easy-dsj-api-web\src\components\layouts\index.vue
  -->
 <template>
-  <div class="fd-home_layout">
-    <div class="fd-home_header" ref="homeHeader">
+  <div class="layout_vertical_tb">
+    <div class="layout_vertical__top" ref="homeHeader">
       <slot name="header"></slot>
     </div>
-    <div class="fd-home_content" ref="homeContent">
-      <div class="fd--home_nav">
-        <slot name="nav"></slot>
-      </div>
-      <div class="fd--home_content">
-        <slot name="content"></slot>
-      </div>
+    <div class="layout_vertical__bottom" ref="homeContent">
+      <slot name="content"></slot>
     </div>
   </div>
 </template>
@@ -39,22 +34,14 @@ export default class LayoutHome extends Vue {
 }
 </script>
 <style lang="less">
-.fd-home_layout {
+.layout_vertical_tb {
   .size(100%);
-  .fd-home_header {
+  .layout_vertical__top {
     .size(100%, 60px);
   }
-  .fd-home_content {
+  .layout_vertical__bottom {
     .size(100%, calc(100% - 60px));
     .flex_box();
-    .fd--home_nav {
-      min-width: 100px;
-      height: 100%;
-    }
-    .fd--home_content {
-      .flex_1();
-      height: 100%;
-    }
   }
 }
 </style>

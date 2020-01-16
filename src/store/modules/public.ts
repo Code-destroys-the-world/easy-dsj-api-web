@@ -8,7 +8,7 @@ export interface State {
 
 const initState: State = {
   version: '0.0.1',
-  activeIndex: '1',
+  activeIndex: 'module',
 };
 
 const getters = {

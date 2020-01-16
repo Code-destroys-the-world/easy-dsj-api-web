@@ -10,27 +10,23 @@
   <div class="fd-index">
     <layoutHome :header-height="80">
       <headerDiv slot="header"></headerDiv>
-      <navDiv slot="nav"></navDiv>
+      <router-view slot="content"></router-view>
     </layoutHome>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import layoutHome from '../components/layouts/index.vue';
+import layoutHome from '../components/layouts/layout_vertical_tb.vue';
 import headerDiv from '../components/layouts/header.vue';
-import navDiv from '../components/layouts/nav.vue';
 
 @Component({
   components: {
     layoutHome,
     headerDiv,
-    navDiv,
   },
 })
-export default class App extends Vue {
-
-}
+export default class App extends Vue {}
 </script>
 <style lang="less">
   .fd-index {

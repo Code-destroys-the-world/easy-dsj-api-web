@@ -16,7 +16,7 @@
           <span>展示类</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="Water-ball">水波球</el-menu-item>
+          <el-menu-item index="waterBall" @click="routerPush('waterBall')">水波球</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
       <!--  -->
@@ -25,7 +25,7 @@
           <span>动画类</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="diffusion">扩散</el-menu-item>
+          <el-menu-item index="diffusion" @click="routerPush('diffusion')">扩散</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
       <!--  -->
@@ -41,7 +41,9 @@
 import { Component, Vue } from 'vue-property-decorator';
 @Component
 export default class extends Vue {
-
+  private routerPush(path: string) {
+    this.$router.push({ name: path });
+  }
 }
 </script>
 <style lang="less">
