@@ -7,13 +7,18 @@
     <api-code>
       <template slot="exhibition">
         <dsj-waterBall
+          :data="postData"
           :titleSold='true'
           :suffix='"分"'
           :Subheading="'我是副标题'"
           :score='score'
           :color='bollColor'
           :distance='distance'/>
-        <input type="text" v-model="score">
+        <h3></h3>
+        <el-input type="text" v-model="score"></el-input>
+      </template>
+      <template slot="code">
+        {{codeText}}
       </template>
     </api-code>
   </div>
@@ -33,6 +38,34 @@ export default class extends Vue {
     w: 155,
     h: 155,
   };
-  private score: string | number = 100;
+  private postData: string | number = '977';
+  private score: string | number = '50%';
+  private codeText: string = `<template>
+            <dsj-waterBall
+              :titleSold='true'
+              :suffix='"分"'
+              :Subheading="'我是副标题'"
+              :score='score'
+              :color='bollColor'
+              :data="data"
+              :distance='distance'/>
+          </template>
+          <script>
+            export default {
+              data() {
+                return {
+                  score: 70%,
+                  color: [{
+                    to: 'rgba(254,200,85, 1)',
+                    from: 'rgba(255,202,87, 0.2)',
+                  }, {
+                    to: 'rgba(254,200,85, 0.6)',
+                    from: 'rgba(255,202,87, 0.2)',
+                  }],
+                  data: 977
+                }
+              }
+            }
+          <\/script>`;
 }
 </script>

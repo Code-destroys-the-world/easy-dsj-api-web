@@ -4,8 +4,8 @@
       <slot name="exhibition"></slot>
     </div>
     <div class="fd-modules_code__leftCode">
-      <pre>
-        <code>
+      <pre v-highlight>
+        <code class="lang-javascript">
           <slot name="code"></slot>
         </code>
       </pre>
@@ -28,6 +28,7 @@ export default class extends Vue {}
       width: 50%;
       float: left;
       height: 500px;
+      .flex_c();
     }
     .fd-modules_code__leftCode {
       width: 50%;
